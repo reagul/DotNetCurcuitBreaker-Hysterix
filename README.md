@@ -19,6 +19,8 @@ You must first create an instance of the Circuit Breaker service in a org/space.
 2. cf create-service p-circuit-breaker-dashboard standard myHystrixService
 3. Wait for the service to become ready! (i.e. cf services) 
 
+![alt text]https://github.com/reagul/DotNetCurcuitBreaker-Hysterix/blob/master/Docs/Hysterix_services.png
+
 # Publish App & Push to CloudFoundry
 
 1. cf target -o myorg -s development
