@@ -72,3 +72,4 @@ Once you have the two applications communicating, you can make use of the Hystri
 1. Open a browser or browser window and connect to the Pivotal Apps Manager.  You will have to use a link that is specific to your Cloud Foundry setup. (e.g. https://apps.system.testcloud.com)
 2. Follow [these instructions](http://docs.pivotal.io/spring-cloud-services/1-3/common/circuit-breaker/using-the-dashboard.html) to open the Hystrix dashboard service.
 3. Go back to the Fortune-Teller-UI application and obtain several fortunes.  Observe the values changing in the Hystrix dashboard.  Click the refresh button on the UI app quickly to see the dashboard update.
+![alt text](https://github.com/reagul/DotNetCurcuitBreaker-Hysterix/blob/master/Docs/Hysterix.png)
