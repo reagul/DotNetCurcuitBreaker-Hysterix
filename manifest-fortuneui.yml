@@ -1,0 +1,9 @@
+---
+applications:
+- name: fortuneui
+  random-route: true
+  env:
+    ASPNETCORE_ENVIRONMENT: Production
+  services:
+    - myDiscoveryService
+    - myHystrixService
