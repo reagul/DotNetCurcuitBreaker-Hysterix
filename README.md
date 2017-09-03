@@ -1,7 +1,7 @@
 # DotNetCurcuitBreaker-Hysterix
 # Pre-requisites - CloudFoundry
 
-1. Installed Pivotal CloudFoundry 
+1. Installed Pivotal CloudFoundry
 2. Installed Spring Cloud Services
 3. Install .NET Core SDK
 
@@ -10,14 +10,14 @@ You must first create an instance of the Service Registry service in a org/space
 
 1. cf target -o myorg -s development
 2. cf create-service p-service-registry standard myDiscoveryService
-3. Wait for the service to become ready! (i.e. cf services) 
+3. Wait for the service to become ready! (i.e. cf services)
 
 # Setup Circuit Breaker Dashboard service on CloudFoundry
 You must first create an instance of the Circuit Breaker service in a org/space.
 
 1. cf target -o myorg -s development
 2. cf create-service p-circuit-breaker-dashboard standard myHystrixService
-3. Wait for the service to become ready! (i.e. cf services) 
+3. Wait for the service to become ready! (i.e. cf services)
 
 ![alt_text](https://github.com/reagul/DotNetCurcuitBreaker-Hysterix/blob/master/Docs/Hysterix_services.png)
 
@@ -25,11 +25,10 @@ You must first create an instance of the Circuit Breaker service in a org/space.
 
 1. cf target -o myorg -s development
 2. cd samples/CircuitBreaker/src/AspDotNetCore/Fortune-Teller/Fortune-Teller-UI
-3. Make sure environment variable `BUILD` is not set to `LOCAL` (i.e. SET BUILD=, unset BUILD)
-4. dotnet restore --configfile nuget.config
-5. Publish app to a directory selecting the framework and runtime you want to run on. 
+3. dotnet restore --configfile nuget.config
+4. Publish app to a directory selecting the framework and runtime you want to run on.
 (e.g. `dotnet publish  -f netcoreapp2.0 -r ubuntu.14.04-x64`)
-6. Push the app using the appropriate manifest.
+5. Push the app using the appropriate manifest.
  (e.g. `cf push -f manifest.yml -p bin/Debug/netcoreapp2.0/ubuntu.14.04-x64/publish` or `cf push -f manifest-windows.yml -p bin/Debug/netcoreapp2.0/win10-x64/publish`)
 
 
@@ -38,7 +37,7 @@ Note: If you are using self-signed certificates it is possible that you might ru
 1. Disable certificate validation for the Spring Cloud Discovery Client.  You can do this by editing `appsettings.json` and add `eureka:client:validate_certificates=false`.
 
 # What to expect - CloudFoundry
-After building and running the app, you should see something like the following in the logs. 
+After building and running the app, you should see something like the following in the logs.
 
 To see the logs as you startup and use the app: `cf logs fortuneui`
 
